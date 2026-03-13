@@ -1,0 +1,74 @@
+# ClawHub Safety Attestation
+# Skill: Claude Code CLI for OpenClaw
+# Version: 1.0.1
+# Publisher: ProSkillsMD / Matrix Zion
+# Date: 2026-03-13
+
+## SHA256 Checksums (verify with: sha256sum <file>)
+
+91f537297d7638d4441ed1c0e9d7a47ad608d403fe10bf20ccaa2071d9bd3724  SKILL.md
+6342a7b67d2283dba35fec3bce09435fd24617bb0a5ac7fdf2663799a5816421  README.md
+624e029503de5790e5e2543c15ca23215f1256694060eca12dd514f4edebd281  .gitignore
+4dc5d6c209bc3ceac1f2648f9b2314a9b156f11eb53065488c7f7562c14b71e9  scripts/install.sh
+dd67c5eec522789c3cdc0666dc4f64641cfde7d73e7e076c4115e329119b4ea8  templates/CLAUDE.md.template
+
+## Security Attestation
+
+This skill is a DOCUMENTATION-ONLY package. It contains:
+- Markdown guide files (.md)
+- A shell installer script (install.sh)
+- A template file (CLAUDE.md.template)
+
+## What This Skill Does (and Does NOT Do)
+
+### DOES:
+- Guides users through installing Claude Code CLI (official Anthropic tool)
+- Explains the OAuth authentication flow using claude.ai browser login
+- Provides an OpenClaw config.patch template (users fill in their own values)
+- Provides a CLAUDE.md project template for project context
+- Runs: npm install -g @anthropic-ai/claude-code (standard npm package install)
+- Runs: claude setup-token (official Anthropic CLI command)
+- Stores CLAUDE_CODE_OAUTH_TOKEN in ~/.bashrc (user's own system, user's own token)
+
+### DOES NOT:
+- Collect, transmit, or exfiltrate any credentials
+- Include any pre-filled tokens or credentials (all are placeholders)
+- Make network requests (beyond npm install and official Anthropic OAuth)
+- Execute code on the user's behalf without explicit user action
+- Modify system files without user consent
+- Access other applications or processes
+
+## Credential Handling Transparency
+
+The flag "encourages storing a long-lived OAuth token" refers to the industry-standard
+pattern of storing environment variables in ~/.bashrc and /etc/environment.
+
+This is:
+- The official recommended approach by Anthropic for Claude Code CLI
+- No different from how AWS_ACCESS_KEY_ID, GITHUB_TOKEN, or OPENAI_API_KEY are stored
+- The user's own token, generated on their own machine, stored on their own system
+- Protected by: .gitignore entries, explicit security warnings, user awareness
+
+Every token reference in this skill uses placeholder text: YOUR_OAUTH_TOKEN_HERE
+No real token values are included anywhere in this package.
+
+## Verification Instructions
+
+```bash
+# Verify no real tokens exist in any file:
+grep -rE "sk-ant-oat01-[A-Za-z0-9_-]{20,}" /path/to/skill/
+# Expected: no output (clean)
+
+# Verify checksums:
+sha256sum SKILL.md README.md .gitignore scripts/install.sh templates/CLAUDE.md.template
+
+# Verify install.sh only calls standard tools:
+grep -E "curl|wget|eval|exec|python|node" scripts/install.sh
+# Expected: only npm, claude, export, echo commands
+```
+
+## Maintainer
+
+ProSkillsMD — https://proskills.md
+GitHub: https://github.com/ProSkillsMD/skill-claude-code-cli
+Security issues: Create an issue at the GitHub repo above
