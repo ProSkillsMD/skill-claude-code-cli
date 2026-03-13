@@ -1,0 +1,24 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# OpenClaw config files (may contain tokens)
+openclaw.json
+config.patch
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Node modules (if anyone runs tests locally)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

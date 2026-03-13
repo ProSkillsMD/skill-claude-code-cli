@@ -1,0 +1,307 @@
+# Project: [Project Name]
+
+> **Project Brain for Claude Code CLI**  
+> This file is automatically read by Claude Code at session start. Keep it updated as the project evolves.
+
+## Overview
+
+[1-2 sentence description of what this project does]
+
+**Purpose:** [Main goal/problem being solved]  
+**Status:** [e.g., In Development, Production, Prototype]  
+**Repository:** [GitHub/GitLab URL if applicable]
+
+## Tech Stack
+
+- **Language:** [e.g., TypeScript, Python, Rust, Go]
+- **Framework:** [e.g., Next.js, React, FastAPI, Django, Express]
+- **Database:** [e.g., PostgreSQL, Supabase, MongoDB, SQLite]
+- **Hosting:** [e.g., Netlify, Vercel, Railway, AWS]
+- **Key Dependencies:**
+  - [package-name] - [purpose]
+  - [package-name] - [purpose]
+  - [package-name] - [purpose]
+
+## Directory Structure
+
+```
+/
+├── src/                  # Main source code
+│   ├── components/       # Reusable components
+│   ├── pages/            # Page components / routes
+│   ├── lib/              # Utility libraries, helpers
+│   ├── api/              # API routes / endpoints
+│   └── types/            # TypeScript type definitions
+├── public/               # Static assets (images, fonts)
+├── tests/                # Unit and integration tests
+├── docs/                 # Documentation
+├── scripts/              # Build/deploy scripts
+├── [backend-dir]/        # Backend code (if separate)
+│   ├── functions/        # Serverless functions
+│   ├── migrations/       # Database migrations
+│   └── schemas/          # Database schemas
+├── .env.local            # Environment variables (NOT committed)
+├── package.json          # Dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+└── CLAUDE.md             # This file
+```
+
+## Key Files
+
+### Frontend
+
+- **`src/App.tsx`** - [Description: e.g., Main app component, routing setup]
+- **`src/pages/Home.tsx`** - [Description: e.g., Landing page]
+- **`src/lib/api.ts`** - [Description: e.g., API client, fetch wrapper]
+
+### Backend
+
+- **`[backend]/functions/auth.ts`** - [Description: e.g., Authentication endpoint]
+- **`[backend]/db/connection.ts`** - [Description: e.g., Database connection pool]
+
+### Configuration
+
+- **`.env.local`** - Environment variables (API keys, database URL)
+- **`package.json`** - Dependencies, scripts (build, test, dev)
+- **`tsconfig.json`** - TypeScript strict mode, path aliases
+
+### Documentation
+
+- **`README.md`** - Project overview, setup instructions
+- **`docs/API.md`** - API endpoint documentation
+- **`docs/DEPLOYMENT.md`** - Deployment workflow
+
+## Coding Standards
+
+### Language & Style
+
+- **TypeScript:** Strict mode enabled (`strict: true`)
+- **Linting:** ESLint configured, run `npm run lint` before commits
+- **Formatting:** Prettier with 2-space indentation, single quotes
+- **Naming Conventions:**
+  - Components: PascalCase (`UserProfile.tsx`)
+  - Files: camelCase (`userHelpers.ts`)
+  - Constants: UPPER_SNAKE_CASE (`API_BASE_URL`)
+  - Functions: camelCase (`getUserData()`)
+
+### React/Frontend (if applicable)
+
+- **Components:** Functional components with hooks (no class components)
+- **State Management:** [e.g., React Context, Zustand, Redux]
+- **Styling:** [e.g., Tailwind CSS, styled-components, CSS modules]
+- **File Organization:** One component per file
+
+### Backend (if applicable)
+
+- **API Design:** RESTful routes, consistent naming (`/api/users`, `/api/posts`)
+- **Error Handling:** Try-catch blocks, return standardized error responses
+- **Database Queries:** Parameterized queries (prevent SQL injection)
+- **Authentication:** [e.g., JWT tokens, session-based, OAuth]
+
+### Testing
+
+- **Framework:** [e.g., Jest, Vitest, Pytest, Mocha]
+- **Coverage:** Aim for >80% on critical paths
+- **File Naming:** `*.test.ts` or `*.spec.ts`
+- **Run Tests:** `npm test` or `npm run test:watch`
+
+## Deployment
+
+### Build Process
+
+```bash
+npm run build       # Build production assets
+npm run preview     # Preview production build locally
+```
+
+### Environment Setup
+
+**Required Environment Variables:**
+
+```env
+DATABASE_URL=postgresql://...
+API_KEY=YOUR_API_KEY_HERE
+JWT_SECRET=YOUR_JWT_SECRET_HERE
+NEXT_PUBLIC_API_BASE_URL=https://...
+CLAUDE_CODE_OAUTH_TOKEN=YOUR_OAUTH_TOKEN_HERE
+```
+
+**Location:** `.env.local` (development), Netlify/Vercel dashboard (production)
+
+**🔒 Security:** Never commit `.env*` files to git. Add to `.gitignore`:
+```gitignore
+.env
+.env.local
+.env.*.local
+```
+
+### Deploy Workflow
+
+1. **Merge to main branch** → Auto-deploys to production
+2. **Feature branches** → Deploy previews at `feature-name.preview.app`
+3. **Manual deploy:** `npm run deploy` or platform CLI
+
+**Platform:** [e.g., Netlify, Vercel, Railway]  
+**Deploy Command:** `npm run build`  
+**Output Directory:** `dist/` or `out/` or `.next/`
+
+### Rollback
+
+```bash
+# Revert to previous commit
+git revert HEAD
+git push origin main  # Triggers redeploy
+```
+
+## Critical Rules
+
+### Security
+
+- **Never commit secrets** — Use `.env.local`, add to `.gitignore`
+- **Sanitize inputs** — Validate all user input, prevent XSS/SQL injection
+- **HTTPS only** — All API calls use secure connections
+- **Auth tokens** — Store in httpOnly cookies or secure storage
+
+### Data Handling
+
+- **Validation:** All API inputs validated (use Zod, Yup, or similar)
+- **Error Messages:** Don't expose internal details to users
+- **Database Migrations:** Always backup before running migrations
+
+### Performance
+
+- **Lazy Loading:** Code-split routes, lazy load heavy components
+- **Caching:** Use appropriate cache headers, cache API responses
+- **Images:** Optimize images, use WebP/AVIF formats
+
+### Git Workflow
+
+- **Branch Naming:** `feature/description`, `fix/bug-name`, `agent/task-name`
+- **Commits:** Clear messages (`fix: auth redirect`, `feat: add user dashboard`)
+- **Before Push:**
+  1. Run linter: `npm run lint`
+  2. Run tests: `npm test`
+  3. Build check: `npm run build`
+
+## Common Tasks
+
+### Add a New Page
+
+1. Create component: `src/pages/NewPage.tsx`
+2. Add route: Update router in `src/App.tsx`
+3. Add navigation link (if needed)
+4. Test locally: `npm run dev`
+
+### Add a New API Endpoint
+
+1. Create function: `backend/functions/new-endpoint.ts`
+2. Define schema/validation
+3. Add to router
+4. Update `docs/API.md`
+5. Test with Postman/curl
+
+### Database Migration
+
+1. Write migration: `backend/migrations/YYYY-MM-DD-description.sql`
+2. Test locally: `npm run migrate:local`
+3. Review changes: `git diff`
+4. Deploy: Merge to main, migration runs automatically
+
+### Update Dependencies
+
+```bash
+npm outdated           # Check for updates
+npm update             # Update minor/patch versions
+npm install pkg@latest # Update specific package
+npm audit fix          # Fix security vulnerabilities
+```
+
+## Gotchas & Edge Cases
+
+- **[Common Issue 1]:** [Description and solution]
+- **[Common Issue 2]:** [Description and solution]
+- **[Database Connection Pooling]:** [e.g., Max 10 connections, reuse clients]
+- **[CORS Configuration]:** [e.g., Allowed origins: localhost:3000, app.domain.com]
+- **[Rate Limiting]:** [e.g., 100 requests/minute per IP]
+
+## Testing
+
+### Run Tests
+
+```bash
+npm test              # Run all tests
+npm run test:watch    # Watch mode
+npm run test:coverage # Coverage report
+```
+
+### Test Structure
+
+```typescript
+describe('Component/Function Name', () => {
+  it('should do expected behavior', () => {
+    // Arrange
+    const input = ...;
+    // Act
+    const result = functionName(input);
+    // Assert
+    expect(result).toBe(expected);
+  });
+});
+```
+
+### Critical Test Cases
+
+- **Authentication:** Login, logout, token refresh, unauthorized access
+- **Forms:** Validation, submission, error handling
+- **API Endpoints:** Success responses, error responses, edge cases
+- **Database Operations:** CRUD operations, transactions, rollbacks
+
+## Dependencies Overview
+
+### Production
+
+- **[package-name]** v[x.x.x] - [Purpose/why we use it]
+- **[package-name]** v[x.x.x] - [Purpose/why we use it]
+
+### Development
+
+- **[package-name]** v[x.x.x] - [Purpose/why we use it]
+- **[package-name]** v[x.x.x] - [Purpose/why we use it]
+
+## Team & Contacts
+
+- **Project Lead:** [Name]
+- **Backend:** [Name/Team]
+- **Frontend:** [Name/Team]
+- **DevOps:** [Name/Team]
+- **Slack/Discord:** [#channel-name]
+
+## Resources
+
+- **Design System:** [Figma/Sketch link]
+- **API Docs:** [Swagger/Postman link]
+- **Staging Environment:** [URL]
+- **Production:** [URL]
+- **Error Tracking:** [Sentry/Rollbar dashboard]
+- **Analytics:** [Google Analytics/Mixpanel dashboard]
+
+## Changelog
+
+### Recent Changes
+
+- **2026-03-13:** [Description of change]
+- **2026-03-10:** [Description of change]
+- **2026-03-05:** [Description of change]
+
+---
+
+**Last Updated:** [YYYY-MM-DD]  
+**Updated By:** [Agent/Person name]
+
+---
+
+## Notes for Claude Code
+
+- **Context Scope:** This file provides full project context. No need to ask about project structure, tech stack, or coding standards — it's all here.
+- **Keep Updated:** When you make significant changes (new routes, refactored modules, updated dependencies), update this file.
+- **Refer Back:** If unsure about patterns, check this file first before inventing new approaches.
