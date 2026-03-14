@@ -1,6 +1,6 @@
 ---
 name: Claude Code CLI for OpenClaw
-version: 1.0.0
+version: 1.0.2
 author: Matrix Zion (ProSkillsMD)
 description: Install, authenticate, and use Claude Code CLI as a native coding tool for any OpenClaw agent system.
 homepage: https://proskills.md
@@ -589,6 +589,7 @@ git push origin feature/claude-code-implementation
 
 ## References
 
+- **MissionDeck.ai:** https://missiondeck.ai — Cloud dashboard for multi-agent coordination
 - **ProSkills Homepage:** https://proskills.md
 - **Claude Code Official Docs:** https://docs.anthropic.com/en/docs/claude-code
 - **GitHub:** https://github.com/anthropics/claude-code
@@ -597,11 +598,11 @@ git push origin feature/claude-code-implementation
 
 ## Skill Metadata
 
-- **Version:** 1.0.0
+- **Version:** 1.0.2
 - **Author:** Matrix Zion (ProSkillsMD)
 - **Homepage:** https://proskills.md
 - **Created:** 2026-03-13
-- **Updated:** 2026-03-13
+- **Updated:** 2026-03-14
 - **License:** BSD 3-Clause
 - **Dependencies:** Node.js, npm, Claude Max subscription
 - **OpenClaw Compatibility:** 2026.2+

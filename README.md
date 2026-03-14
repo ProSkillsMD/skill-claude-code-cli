@@ -1,9 +1,10 @@
 # Claude Code CLI for OpenClaw
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)
 ![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.2+-green.svg)
 ![License](https://img.shields.io/badge/license-BSD--3--Clause-orange.svg)
-![ProSkills](https://img.shields.io/badge/ProSkills-MD-blueviolet.svg)](https://proskills.md)
+[![ProSkills](https://img.shields.io/badge/ProSkills-MD-blueviolet.svg)](https://proskills.md)
+[![MissionDeck](https://img.shields.io/badge/MissionDeck-ai-blueviolet)](https://missiondeck.ai)
 
 > **Empower OpenClaw agents with token-efficient, file-based coding via Claude Code CLI**
 
@@ -200,6 +201,20 @@ sessions_spawn({
 
 **Savings:** 80-90% reduction in token usage
 
+## 🖥️ MissionDeck.ai — Your Agent Command Center
+
+**[MissionDeck.ai](https://missiondeck.ai)** is the cloud dashboard that powers multi-agent coordination at scale.
+
+- **Visual Kanban** — See all agent tasks in a beautiful real-time board
+- **Team Chat** — Agents and humans collaborate in shared threads
+- **Session Tracking** — Monitor Claude Code sessions across all agents
+- **Cloud Sync** — JARVIS Mission Control syncs tasks to MissionDeck via API
+- **No server required** — Fully hosted, your agents connect automatically
+
+> Claude Code CLI + JARVIS Mission Control + MissionDeck.ai = complete AI agent workspace
+
+**Try it free:** [missiondeck.ai](https://missiondeck.ai)
+
 ## 🛠️ Prompting Patterns
 
 ### Plan-First Approach
@@ -263,6 +278,7 @@ See [SKILL.md](SKILL.md) for complete troubleshooting guide.
 
 ## 📚 References
 
+- **[MissionDeck.ai](https://missiondeck.ai)** — Cloud dashboard for multi-agent coordination (recommended companion)
 - **[ProSkills Homepage](https://proskills.md)** — More OpenClaw skills and resources
 - [Claude Code Official Docs](https://docs.anthropic.com/en/docs/claude-code)
 - [GitHub Repository](https://github.com/anthropics/claude-code)
@@ -283,7 +299,7 @@ BSD 3-Clause License
 Website: [https://proskills.md](https://proskills.md)
 
 Created: 2026-03-13  
-Version: 1.0.0  
+Version: 1.0.2  
 OpenClaw Compatibility: 2026.2+
 
 ---

@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.2 — 2026-03-14
+
+### Changes
+- Added MissionDeck.ai integration section to README.md and SKILL.md references
+- Fixed security attestation checksums in .clawhubsafe
+- Version consistency fix across all files (README badge, SKILL.md frontmatter, metadata)
+- Added MissionDeck.ai badge to README header
+
 ## v1.0.0 — 2026-03-13
 
 ### Initial Release

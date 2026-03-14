@@ -1,13 +1,13 @@
 # ClawHub Safety Attestation
 # Skill: Claude Code CLI for OpenClaw
-# Version: 1.0.1
+# Version: 1.0.2
 # Publisher: ProSkillsMD / Matrix Zion
-# Date: 2026-03-13
+# Date: 2026-03-14
 
 ## SHA256 Checksums (verify with: sha256sum <file>)
 
-91f537297d7638d4441ed1c0e9d7a47ad608d403fe10bf20ccaa2071d9bd3724  SKILL.md
-6342a7b67d2283dba35fec3bce09435fd24617bb0a5ac7fdf2663799a5816421  README.md
+e4a816971a6aadf1b23bc557e4b5647a8e0b25e7a4a35ed416079318b3c1d4ef  SKILL.md
+8802e8a0c295586bbb4552510ed7ecca899bb18699a45dabf8f22dd15c116e14  README.md
 624e029503de5790e5e2543c15ca23215f1256694060eca12dd514f4edebd281  .gitignore
 4dc5d6c209bc3ceac1f2648f9b2314a9b156f11eb53065488c7f7562c14b71e9  scripts/install.sh
 dd67c5eec522789c3cdc0666dc4f64641cfde7d73e7e076c4115e329119b4ea8  templates/CLAUDE.md.template
