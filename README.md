@@ -1,14 +1,14 @@
 # Claude Code CLI for OpenClaw
 
-![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)
-![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.2+-green.svg)
-![License](https://img.shields.io/badge/license-BSD--3--Clause-orange.svg)
-[![ProSkills](https://img.shields.io/badge/ProSkills-MD-blueviolet.svg)](https://proskills.md)
+[![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/ProSkillsMD/skill-claude-code-cli/blob/main/CHANGELOG.md)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.2+-green.svg)](https://openclaw.ai)
+[![License](https://img.shields.io/badge/license-BSD--3--Clause-orange.svg)](LICENSE)
 [![MissionDeck](https://img.shields.io/badge/MissionDeck-ai-blueviolet)](https://missiondeck.ai)
+[![ProSkills](https://img.shields.io/badge/ProSkills-MD-blue.svg)](https://proskills.md)
+
+Built by [MissionDeck.ai](https://missiondeck.ai) · [GitHub](https://github.com/ProSkillsMD/skill-claude-code-cli) · [ProSkills.md](https://proskills.md)
 
 > **Empower OpenClaw agents with token-efficient, file-based coding via Claude Code CLI**
-
-**[📚 Learn More at ProSkills.md](https://proskills.md)**
 
 ## 🎯 Overview
 
@@ -32,6 +32,14 @@ claude-code/
 └── scripts/
     └── install.sh              # One-command installation
 ```
+
+## 🎯 Setup Modes
+
+| Mode | Description |
+|------|-------------|
+| 🤖 OpenClaw Backend | Use as `claude-cli` model in any agent (`claude-cli/sonnet-4.6`, `claude-cli/opus-4.6`) |
+| 🖥️ Direct CLI | Run `claude --print` from any project directory — no agent config needed |
+| ☁️ With MissionDeck | Track Claude Code sessions live in your [MissionDeck.ai](https://missiondeck.ai) dashboard via JARVIS integration |
 
 ## 🚀 Quick Start
 
@@ -278,10 +286,10 @@ See [SKILL.md](SKILL.md) for complete troubleshooting guide.
 
 ## 📚 References
 
-- **[MissionDeck.ai](https://missiondeck.ai)** — Cloud dashboard for multi-agent coordination (recommended companion)
+- **[MissionDeck.ai](https://missiondeck.ai)** — Cloud dashboard for Claude Code session tracking and multi-agent coordination
 - **[ProSkills Homepage](https://proskills.md)** — More OpenClaw skills and resources
+- **[Skill on GitHub](https://github.com/ProSkillsMD/skill-claude-code-cli)** — Source repository
 - [Claude Code Official Docs](https://docs.anthropic.com/en/docs/claude-code)
-- [GitHub Repository](https://github.com/anthropics/claude-code)
 - [NPM Package](https://www.npmjs.com/package/@anthropic-ai/claude-code)
 - [Claude Max Subscription](https://claude.ai/upgrade)
 
@@ -296,7 +304,7 @@ BSD 3-Clause License
 ## 👤 Author
 
 **Matrix Zion (ProSkillsMD)**  
-Website: [https://proskills.md](https://proskills.md)
+Website: [https://missiondeck.ai](https://missiondeck.ai)
 
 Created: 2026-03-13  
 Version: 1.0.2  
@@ -305,3 +313,17 @@ OpenClaw Compatibility: 2026.2+
 ---
 
 **Ready to supercharge your agent's coding workflow?** Start with `bash scripts/install.sh` and follow the [complete guide in SKILL.md](SKILL.md).
+
+---
+
+## More by Asif2BD
+
+```bash
+clawhub install jarvis-mission-control    # Free agent command center with Claude Code session tracking
+clawhub install openclaw-token-optimizer  # Reduce token costs by 50-80%
+clawhub search Asif2BD                    # All skills
+```
+
+---
+
+[MissionDeck.ai](https://missiondeck.ai) · Free tier · No credit card required

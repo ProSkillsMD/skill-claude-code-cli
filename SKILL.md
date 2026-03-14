@@ -3,9 +3,38 @@ name: Claude Code CLI for OpenClaw
 version: 1.0.2
 author: Matrix Zion (ProSkillsMD)
 description: Install, authenticate, and use Claude Code CLI as a native coding tool for any OpenClaw agent system.
-homepage: https://proskills.md
+homepage: https://missiondeck.ai
 tags: [claude-code, coding, cli, anthropic, agent-tools]
 openclaw: ">=2026.2"
+metadata:
+  {
+    "openclaw":
+      {
+        "emoji": "🤖",
+        "requires": { "bins": ["node", "npm"] },
+        "install":
+          [
+            {
+              "id": "listing",
+              "kind": "link",
+              "label": "📚 ProSkills Listing",
+              "url": "https://proskills.md/skills/claude-code-cli",
+            },
+            {
+              "id": "github",
+              "kind": "link",
+              "label": "GitHub Repository",
+              "url": "https://github.com/ProSkillsMD/skill-claude-code-cli",
+            },
+            {
+              "id": "missiondeck",
+              "kind": "link",
+              "label": "☁️ MissionDeck.ai Cloud",
+              "url": "https://missiondeck.ai",
+            },
+          ],
+      },
+  }
 ---
 
 # Skill: Claude Code CLI for OpenClaw
@@ -26,6 +55,14 @@ This skill teaches OpenClaw agents how to install, authenticate, configure, and 
 - Multi-file code changes
 - Project scaffolding
 - Code reviews and analysis
+
+## 🎯 Setup Modes
+
+| Mode | Description |
+|------|-------------|
+| 🤖 OpenClaw Backend | Use as `claude-cli` model in any agent (`claude-cli/sonnet-4.6`, `claude-cli/opus-4.6`) |
+| 🖥️ Direct CLI | Run `claude --print` from any project directory — no agent config needed |
+| ☁️ With MissionDeck | Track Claude Code sessions live in your [MissionDeck.ai](https://missiondeck.ai) dashboard via JARVIS integration |
 
 ## Prerequisites
 
@@ -589,18 +626,18 @@ git push origin feature/claude-code-implementation
 
 ## References
 
-- **MissionDeck.ai:** https://missiondeck.ai — Cloud dashboard for multi-agent coordination
-- **ProSkills Homepage:** https://proskills.md
-- **Claude Code Official Docs:** https://docs.anthropic.com/en/docs/claude-code
-- **GitHub:** https://github.com/anthropics/claude-code
-- **NPM Package:** https://www.npmjs.com/package/@anthropic-ai/claude-code
-- **Claude Max Subscription:** https://claude.ai/upgrade
+- **[MissionDeck.ai](https://missiondeck.ai)** — Cloud dashboard for Claude Code session tracking and multi-agent coordination
+- **[ProSkills Homepage](https://proskills.md)** — More OpenClaw skills and resources
+- **[Claude Code Official Docs](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic documentation
+- **[GitHub Repository](https://github.com/ProSkillsMD/skill-claude-code-cli)** — Skill source
+- **[NPM Package](https://www.npmjs.com/package/@anthropic-ai/claude-code)** — Claude Code CLI on npm
+- **[Claude Max Subscription](https://claude.ai/upgrade)** — Required for OAuth auth
 
 ## Skill Metadata
 
 - **Version:** 1.0.2
 - **Author:** Matrix Zion (ProSkillsMD)
-- **Homepage:** https://proskills.md
+- **Homepage:** https://missiondeck.ai
 - **Created:** 2026-03-13
 - **Updated:** 2026-03-14
 - **License:** BSD 3-Clause
@@ -615,3 +652,17 @@ git push origin feature/claude-code-implementation
 3. Configure OpenClaw: Add CLI backend to `config.patch`
 4. Create project CLAUDE.md: Copy template and customize
 5. Start coding: `CLAUDE_CODE_OAUTH_TOKEN=$token claude --print "your task"`
+
+---
+
+## More by Asif2BD
+
+```bash
+clawhub install jarvis-mission-control    # Free agent command center with Claude Code session tracking
+clawhub install openclaw-token-optimizer  # Reduce token costs by 50-80%
+clawhub search Asif2BD                    # All skills
+```
+
+---
+
+[MissionDeck.ai](https://missiondeck.ai) · Free tier · No credit card required
